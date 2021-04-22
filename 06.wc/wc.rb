@@ -8,7 +8,7 @@ DEFAULT_OPTIONS = {
   'c' => true
 }.freeze
 
-class WordCountInString
+class WordCount
   def initialize(string)
     @string = string
   end
@@ -54,7 +54,7 @@ file_names.each do |file_name|
   end
 
   string = file_name.empty? ? $stdin.readlines.join : File.open(file_name).read
-  word_count = WordCountInString.new(string)
+  word_count = WordCount.new(string)
 
   word_count_list = []
   options.each do |option, value|
